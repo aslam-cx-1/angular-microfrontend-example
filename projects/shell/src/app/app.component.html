@@ -1,0 +1,50 @@
+<header class="p-4 mx-4 flex flex-row justify-between items-center">
+  <div class="text-l inline-flex justify-end items-center text-slate-700">
+    <ng-template #greeting>
+      <span class="mr-4">Hello Microapps!</span>
+    </ng-template>
+
+    <nav>
+      <ul class="inline-flex gap-3 items-center">
+        <li>
+          <a routerLink="/">
+            <button
+              class="flex items-center transition ease-in delay-150 duration-300 h-10 px-4 rounded-lg hover:border hover:border-sky-400"
+              routerLinkActive="text-cyan-500 font-semibold"
+              [routerLinkActiveOptions]="{ exact: true }"
+            >
+              <span class="material-icons-outlined text-gray-500">home</span>
+              <span>&nbsp;Home (shell)</span>
+            </button>
+          </a>
+        </li>
+        <li>
+          <a routerLink="/app1">
+            <button
+              class="flex items-center transition ease-in delay-150 duration-300 h-10 px-4 rounded-lg hover:border hover:border-sky-400"
+              routerLinkActive="text-cyan-500 font-semibold"
+            >
+              <span class="material-icons-outlined text-gray-500">article</span>
+              <span>&nbsp;App1</span>
+            </button>
+          </a>
+        </li>
+        <li>
+          <a routerLink="/app2">
+            <button
+              class="flex items-center transition ease-in delay-150 duration-300 h-10 px-4 rounded-lg hover:border hover:border-sky-400"
+              routerLinkActive="text-cyan-500 font-semibold"
+            >
+              <span class="material-icons-outlined text-gray-500">article</span>
+              <span>&nbsp;App2</span>
+            </button>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="mt-6">
+  <router-outlet></router-outlet>
+</div>

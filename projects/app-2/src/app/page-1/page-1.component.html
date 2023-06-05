@@ -1,0 +1,15 @@
+<h3 class="text-xl mb-6">App-2 page</h3>
+
+<p *ngIf="count <= 0">
+  Nothing in the counter yet!
+</p>
+
+<div *ngIf="count > 0">
+  <p class="mt-6">Total number of items: {{ count }}</p>
+</div>
+
+<button
+  class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+  id="increment"
+  (click)="decrement()"
+>Decrement</button>
